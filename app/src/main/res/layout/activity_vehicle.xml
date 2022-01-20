@@ -1,0 +1,1172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="车辆基本信息"
+            android:textColor="@color/blue"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5px"
+            android:background="#B8B8B8"
+            android:paddingTop="5dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linelayout_vehicle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车辆查询:"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txtfontsize" />
+
+        <EditText
+            android:id="@+id/et_vehicle_queryhphmmac"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入车牌查询"
+            android:text=""
+            android:textSize="@dimen/txtfontsize" />
+
+        <Button
+            android:id="@+id/but_vehicle_query"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_circle_shape"
+            android:gravity="center"
+            android:text="查"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5px"
+            android:background="#B8B8B8"
+            android:paddingTop="5dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="0dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp"
+                android:id="@+id/lay_vehicle_jylsh">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="流水号码:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <TextView
+                    android:id="@+id/tv_vehicle_jylsh"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="检验流水号"
+                    android:text=""
+                    android:textSize="@dimen/txtfontsize"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_ywlx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="业务类型:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="澳门车牌:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_hphmmac"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="请输入澳门车牌"
+                    android:text=""
+                    android:textSize="@dimen/txtfontsize"
+                    android:visibility="gone"/>
+
+                <com.mh.ajappnew.view.HPEditText
+                    android:id="@+id/hp_vehicle_hphmmac"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txtfontsize"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text=""/>
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="标准格式"
+                    android:textSize="@dimen/txtfontsize"
+                    android:layout_marginEnd="10dp"
+                    android:checked="true"
+                    android:id="@+id/cb_vehicle_caninputheng"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="申请编号:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_sqbh"
+                    android:layout_width="0sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint=""
+                    android:text=""
+                    android:textSize="@dimen/txtfontsize" />
+
+                <Button
+                    android:id="@+id/but_vehicle_querysqbh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/button_circle_shape"
+                    android:gravity="center"
+                    android:text="获取"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_cp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="车辆品牌:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_cllx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="车辆类型:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_djys"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="登记颜色:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+                <Button
+                    android:id="@+id/but_vehicle_djys"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="清空" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_cyys"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="查验颜色:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+                <Button
+                    android:id="@+id/but_vehicle_cyys"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="清空" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_fxwz"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="方向位置:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_qzdz"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="前照灯制:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_xgfs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="悬挂方式:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_zdfs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="制动方式:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_ryzl"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="燃料种类:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_qdxs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="驱动形式:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_btgg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="备胎规格:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_zs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="轴数:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_zxzs"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:comboxcaption="转向轴数:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txtfontsize"
+                android:textColor="@color/black"
+                android:text="座位数:"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/txtfontsize"
+                android:inputType="number"
+                android:id="@+id/et_vehicle_zws"
+                android:maxLength="2"
+                android:layout_weight="1"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txtfontsize"
+                android:textColor="@color/black"
+
+                android:text="登记日期:"/>
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/txtfontsize"
+                android:inputType="date"
+                android:layout_weight="3"
+                android:textColor="@color/black"
+                android:id="@+id/et_vehicle_djrqmac"/>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <CheckBox
+                    android:id="@+id/cb_vehicle_sfdzzc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否电子手刹"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <CheckBox
+                    android:id="@+id/cb_vehicle_sfkqxj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否有空气悬架轴"
+                    android:textSize="@dimen/txtfontsize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="5dp">
+
+                <com.mh.ajappnew.view.ComboxItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/combox_vehicle_zcwz"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    app:comboxcaption="驻车位置:"
+                    app:comboxshow_line="false"
+                    app:comboxshow_more="true"
+                    app:comboxvalue="" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="驻车位置:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <CheckBox
+                    android:id="@+id/cb_vehicle_zcwz1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1轴" />
+
+                <CheckBox
+                    android:id="@+id/cb_vehicle_zcwz2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2轴" />
+
+                <CheckBox
+                    android:id="@+id/cb_vehicle_zcwz3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="3轴" />
+
+                <CheckBox
+                    android:id="@+id/cb_vehicle_zcwz4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="4轴" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100sp"
+                    android:text="行驶里程:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize"/>
+
+                <EditText
+                    android:id="@+id/et_vehicle_xslc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:text="公里"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100sp"
+                    android:text="前排人数:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_qprs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="输入前排人数"
+                    android:maxLength="1"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize"/>
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="10dp"
+                    android:text="随车物品:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_scwp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_scwpjson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textSize="@dimen/txtfontsize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/but_vehicle_scwp"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="选择" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="10dp"
+                    android:text="备注:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_remark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_remarkjson"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:scrollHorizontally="true"
+                    android:singleLine="false"
+                    android:text=""
+                    android:textSize="@dimen/txtfontsize"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/but_vehicle_remark"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:text="选择" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp"
+                android:id="@+id/lay_vehicle_hxnc">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100sp"
+                    android:text="货箱内部尺寸(mm):"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_hxnc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="长"
+                    android:maxLength="5"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="×"
+
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_hxnk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:maxLength="4"
+                    android:hint="宽"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="×"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_hxng"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:maxLength="4"
+                    android:hint="高"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize" />
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:width="100sp"
+                    android:text="外廓尺寸(mm):"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_cwkc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="长"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize"
+                    android:maxLength="5"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="×"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_cwkk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="宽"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize"
+                    android:maxLength="4"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="×"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_cwkg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:hint="高"
+                    android:inputType="number"
+                    android:textSize="@dimen/txtfontsize"
+                    android:maxLength="4"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系人:"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <EditText
+                    android:id="@+id/et_vehicle_lxr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/txtfontsize" />
+
+                <RadioGroup
+                    android:id="@+id/rg_vehicle_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:visibility="gone"
+                    android:orientation="horizontal"
+                    android:paddingEnd="8dp">
+
+                    <RadioButton
+                        android:id="@+id/rb_vehicle_man"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="true"
+                        android:tag="男"
+                        android:text="男" />
+
+                    <RadioButton
+                        android:id="@+id/rb_vehicle_woman"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:checked="false"
+                        android:tag="女"
+                        android:text="女" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingTop="0dp">
+
+                <LinearLayout
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="联系电话:"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/txtfontsize" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_vehicle_lxdh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="内地电话"
+                        android:textSize="@dimen/txtfontsize"
+                        android:inputType="number" />
+
+                    <EditText
+                        android:id="@+id/et_vehicle_lxdhmac"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/txtfontsize"
+                        android:hint="澳门电话"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="5dp">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5px"
+                    android:background="#B8B8B8"
+                    android:paddingTop="5dp"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/lay_vehicle_sign">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100sp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="查验员:"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/img_vehicle_wgjyy"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/pen1"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100sp"
+                        android:layout_height="match_parent"
+                        android:text=""/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_vehicle_cyy"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text=""/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="1dp">
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.5px"
+                        android:background="#B8B8B8"
+                        android:paddingTop="5dp"
+                        android:visibility="visible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100sp"
+                        android:layout_height="match_parent"
+
+                        android:gravity="center"
+                        android:text="经办人:"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/img_vehicle_jbr"
+                        android:layout_width="0dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:src="@drawable/pen1"
+                        android:textSize="15dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5px"
+            android:background="#B8B8B8"
+            android:paddingTop="5dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/but_vehicle_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle_shape"
+            android:paddingLeft="10dp"
+            android:text="登录"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_vehicle_space"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/but_vehicle_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle_shape"
+            android:padding="10dp"
+            android:text="保存"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/but_vehicle_savetemp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle_shape"
+            android:padding="10dp"
+            android:text="暂存"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_vehicle_space2"
+            android:text=""
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/but_vehicle_exit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_circle_shape"
+            android:layout_marginRight="10dp"
+            android:text="退出"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+

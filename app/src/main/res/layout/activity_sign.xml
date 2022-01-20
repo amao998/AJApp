@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:paddingStart="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="流水号:" />
+
+        <TextView
+            android:id="@+id/tv_sign_detectid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2020202202"/>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="类型:" />
+
+        <TextView
+            android:id="@+id/tv_sign_typeid"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0201"
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_typename"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="外观检员"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <com.mh.ajappnew.view.SignView
+            android:id="@+id/signview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <Button
+            android:id="@+id/but_sign_resign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重 签" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+
+        <Button
+            android:id="@+id/but_sign_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="确 定" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/but_sign_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退 出" />
+    </LinearLayout>
+</LinearLayout>

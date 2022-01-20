@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.mh.ajappnew.view.PersonalItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_personal4_name"
+            android:layout_width="match_parent"
+            app:icon="@drawable/people"
+            android:layout_height="50dp"
+            android:background="#fff"
+            app:name="用户名:"
+            app:show_line="true"
+            app:show_more="true"
+            android:gravity="center"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.mh.ajappnew.view.PersonalItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_personal4_modifypwd"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:background="#fff"
+            app:icon="@drawable/lock"
+            app:name="修改密码"
+            app:show_line="true"
+            app:show_more="true" />
+
+        <com.mh.ajappnew.view.PersonalItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_personal4_ver"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:background="#fff"
+            app:icon="@drawable/update"
+            app:name="服务器版本"
+            app:show_line="true"
+            app:show_more="true" />
+
+        <com.mh.ajappnew.view.PersonalItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_personal4_verlocal"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:background="#fff"
+            app:icon="@drawable/update"
+            app:name="当前版本号"
+            app:show_line="true"
+            app:show_more="true" />
+
+        <com.mh.ajappnew.view.PersonalItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_personal4_tempdata"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:background="#fff"
+            app:icon="@drawable/pass1"
+            app:name="数据缓存"
+            app:show_line="true"
+            app:show_more="true" />
+
+        <com.mh.ajappnew.view.PersonalItemView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/item_personal4_quit"
+            android:layout_width="match_parent"
+
+            android:layout_height="50dp"
+            android:background="#fff"
+            app:icon="@drawable/quit"
+            app:name="退出"
+            app:show_line="true"
+            app:show_more="true" />
+
+    </LinearLayout>
+
+</LinearLayout>

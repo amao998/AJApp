@@ -1,0 +1,31 @@
+/*
+* hphmmac 澳门车牌
+* cllx    车辆类型
+* cp      厂牌
+* djys    登记颜色
+* cyys    查验颜色
+* fxwz    方向位置
+* qzdz    前照灯制
+* xgfs    悬挂方式
+* zdfs    制动方式
+* ryzl    燃油种类
+* zcwz    驻车位置
+* qdxs    驱动形式
+* btgg    备胎规格
+* xslc    行驶里程
+* lxr     联系人
+* sex     性别
+* lxdh    联系电话
+* lxdhmac 联系电话(澳门)
+* zt      0:暂存,1:PDA登录(写了1863KZM表),2:验证系统已登录
+* ywlx    业务类型
+* zs      轴数
+* zxzs    转向轴数
+* sfdzzc  是否电子手制
+* sfkqxj  是否空气悬架
+* cwkc    长
+* cwkk    宽
+* cwkg    高
+* */
+
+//2021-11-17 改增加车加号照片像素  v32
